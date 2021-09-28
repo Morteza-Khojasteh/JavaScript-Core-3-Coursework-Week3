@@ -70,3 +70,26 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function findPeople(hogwarts) {
+  hogwarts.forEach(({firstName, lastName, house}) => {
+    if(house === "Gryffindor") {
+      console.log(`I'm ${firstName} ${lastName},`);
+    }
+  });
+};
+
+findPeople(hogwarts);
+
+
+function findTeacher(hogwarts){
+  hogwarts.forEach(({ firstName, lastName, occupation, pet }) => {
+    if (occupation === "Teacher" && pet !== null) {
+      console.log(`I'm ${firstName} ${lastName},`);
+    }
+  }); 
+}
+
+findTeacher(hogwarts);
+
